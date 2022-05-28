@@ -20,4 +20,5 @@ void cl_app::derevo() {
 		}
 		(cur_predok)->add_spinogriz(std::unique_ptr<cl_base>(new node(spinogriz)));
 	} while (true);
+	cout << root_name;
 }
