@@ -8,14 +8,15 @@ void cl_base::add_spinogriz(std::unique_ptr <cl_base>&& spinogriz) {
 
 }
 
-void cl_base::print_hierarchy(int offset) const {
-	if (offset != 0) {
-		std::cout << "\n";
+void cl_base::print_hierarchy() const {
+	if (spinogrizi.size() == 0) {
+		return;
 	}
-	std::cout << std::string(offset * 4, ' ') << this->ob_name;
+	std::cout << "\n" << this->ob_name;
 	for (const auto& spin : spinogrizi) {
-		spin->print_hierarchy(offset + 1);
-	}
+		std::cout << " " << (spin)->get_name();
+		}
+	(spinogrizi.back())->print_hierarchy();
 
 }
 void cl_base::detdom(cl_base* new_predok) {
