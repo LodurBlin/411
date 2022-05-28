@@ -19,7 +19,7 @@ public:
 	}
 	void add_spinogriz(std::unique_ptr<cl_base>&&); //добавление потомка в иерархию
 
-	void print_hierarchy(int offset = 0) const; //вывод наим об.
+	void print_hierarchy() const; //вывод наим об.
 
 	cl_base* kto_otez();//получение указателя на головной объект
 
