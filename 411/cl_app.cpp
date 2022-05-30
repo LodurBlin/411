@@ -16,7 +16,7 @@ void cl_app::derevo() {
 			break;
 		}
 		if (predok != cur_predok->get_name()) {
-			cur_predok = spinogrizi.back().get();
+			cur_predok = (cur_predok)->spinogrizi.back().get();
 		}
 		(cur_predok)->add_spinogriz(std::unique_ptr<cl_base>(new node(spinogriz)));
 	} while (true);
